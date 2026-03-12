@@ -48,8 +48,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
     [_FN] = LAYOUT_elora_hlc(
       KC_F1  , KC_F2  , KC_F3  , KC_F4  , KC_F5  , KC_F6  ,                                        KC_F7  , KC_F8  , KC_F9  , KC_F10 , KC_F11 , KC_F12 ,
-      _______, _______, _______, _______, _______, _______,                                        _______, UG_NEXT, UG_HUEU, UE_SATU, UE_VALU, _______,
-      _______, _______, _______, _______, _______, _______,                                        _______, UG_PREV, UG_HUED, UE_SATD, UE_VALD, _______,
+      _______, _______, _______, _______, _______, _______,                                        _______, UG_NEXT, UG_HUEU, UG_SATU, UG_VALU, _______,
+      _______, _______, _______, _______, _______, _______,                                        _______, UG_PREV, UG_HUED, UG_SATD, UG_VALD, _______,
       _______, _______, _______, _______, _______, _______, KC_MPRV, _______,    _______, KC_MNXT, _______, UG_TOGG, _______, _______, _______, _______,
                                  _______, _______, _______, _______, _______,    _______, _______, _______, _______, _______,
      _______, _______,  _______, _______, _______,                                                          _______, _______, _______, _______, _______
@@ -70,5 +70,6 @@ combo_t key_combos[2] = {
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
     [0] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU),  ENCODER_CCW_CW(KC_VOLD, KC_VOLU),  ENCODER_CCW_CW(KC_PGUP, KC_PGDN),  ENCODER_CCW_CW(KC_PGUP, KC_PGDN)  },
     [1] = { ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______)  },
+    [2] = { ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______),  ENCODER_CCW_CW(_______, _______)  },
 };
 #endif
