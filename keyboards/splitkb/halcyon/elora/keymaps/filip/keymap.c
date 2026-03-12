@@ -9,7 +9,7 @@ enum layers {
     _SYM,
 };
 
-#define SYM      MO(_SYM)
+#define SYM MO(_SYM)
 // There is an extra row added for the Halcyon modules. Currently only the Encoder module is
 // supported but we reserve 5 keys per half for future expansion. Your personal keymap will also
 // need to be updated to include this row, and the `LAYOUT` macro will need to be updated to
@@ -25,10 +25,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      KC_TAB ,   SE_Q ,   SE_W ,   SE_E ,   SE_R ,   SE_T ,                                           SE_Y ,   SE_U ,   SE_I ,    SE_O ,   SE_P , SE_ARNG,
      KC_CAPS,   SE_A ,   SE_S ,   SE_D ,   SE_F ,   SE_G ,                                           SE_H ,   SE_J ,   SE_K ,    SE_L , SE_ODIA, SE_ADIA,
      KC_LCTL,   SE_Z ,   SE_X ,   SE_C ,   SE_V ,   SE_B , KC_LEFT, KC_DOWN,     KC_UP  , KC_RGHT,   SE_N ,   SE_M , SE_COMM,  SE_DOT , SE_MINS, KC_ENT ,
-                                MS_BTN1, MS_BTN2, KC_LSFT, KC_SPC , MO(1)  ,     KC_RGUI, KC_BSPC, KC_RSFT, KC_MPLY, KC_RALT,
+                                MS_BTN1, MS_BTN2, KC_LSFT, KC_SPC , SYM    ,     KC_RGUI, KC_BSPC, KC_RSFT, KC_MPLY, KC_RALT,
      KC_MUTE, KC_NO,  KC_NO, KC_NO, KC_NO,                                                                KC_MUTE, KC_NO, KC_NO, KC_NO, KC_NO
     ),
-
 
 /*
  * Sym Layer: Numbers and symbols
@@ -42,6 +41,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      _______, _______,  _______, _______, _______,                                                       _______, _______, _______, _______, _______
     ),
 };
+
+// combos
+const uint16_t PROGMEM combo_qwerty_escape[] = {SE_S, SE_D,  SE_F, COMBO_END};
+const uint16_t PROGMEM combo_qwerty_enter[] = {SE_J, SE_K,  SE_L, COMBO_END};
+
+combo_t key_combos[2] = {
+  COMBO(combo_qwerty_escape,     KC_ESC),
+  COMBO(combo_qwerty_enter,      KC_ENT)
+};
+
 
 #if defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
