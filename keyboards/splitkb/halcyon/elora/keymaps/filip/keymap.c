@@ -27,7 +27,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      KC_TAB ,   SE_Q ,   SE_W ,   SE_E ,   SE_R ,   SE_T ,                                           SE_Y ,   SE_U ,   SE_I ,   SE_O ,   SE_P , SE_ARNG,
      KC_CAPS,   SE_A ,   SE_S ,   SE_D ,   SE_F ,   SE_G ,                                           SE_H ,   SE_J ,   SE_K ,   SE_L , SE_ODIA, SE_ADIA,
      KC_LCTL,   SE_Z ,   SE_X ,   SE_C ,   SE_V ,   SE_B , KC_LEFT, KC_DOWN,     KC_UP  , KC_RGHT,   SE_N ,   SE_M , SE_COMM, SE_DOT , SE_MINS, KC_ENT ,
-                                MS_BTN1, MS_BTN2, KC_LSFT, KC_SPC , SYM    ,     KC_RGUI, KC_BSPC, KC_RSFT, KC_MPLY, KC_ALGR,
+                                KC_LALT,  KC_NO , KC_LSFT, KC_SPC , SYM    ,     KC_RGUI, KC_BSPC, KC_RSFT, KC_MPLY, KC_ALGR,
      KC_MUTE,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                                                           KC_MUTE,  KC_NO ,  KC_NO ,  KC_NO ,  KC_NO
     ),
 
