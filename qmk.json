@@ -5,8 +5,8 @@
             "splitkb/halcyon/elora/rev2",
             "filip",
             {
-                "HLC_ENCODER": "1",
-                "TARGET": "encoder_test"
+                "HLC_NONE": "1",
+                "TARGET": "no_module"
             }
         ],
         [
@@ -14,7 +14,7 @@
             "filip",
             {
                 "HLC_CIRQUE_TRACKPAD": "1",
-                "TARGET": "trackpad_test"
+                "TARGET": "trackpad"
             }
         ]
     ]
